@@ -23,7 +23,9 @@ export const ActionTypes = {
 	FETCH_USER_FAIL: actionTypeCheck('[Api] Fetch User Fail'),
 	FETCH_AGGREGATION: actionTypeCheck('[Api] Fetch Aggregation'),
 	FETCH_AGGREGATION_SUCCESS: actionTypeCheck('[Api] Fetch Aggregation Success'),
-	FETCH_AGGREGATION_FAIL: actionTypeCheck('[Api] Fetch Aggregation Fail')
+	FETCH_AGGREGATION_FAIL: actionTypeCheck('[Api] Fetch Aggregation Fail'),
+	SHOW_USER_FEED: actionTypeCheck('Show User Feed'),
+	SHOW_SEARCH_RESULTS: actionTypeCheck('Show Search Results')
 };
 
 /**
@@ -102,6 +104,18 @@ export class FetchAggregationFailAction implements Action {
 	constructor(public payload: any) {}
 }
 
+export class ShowUserFeed implements Action {
+	type = ActionTypes.SHOW_USER_FEED;
+
+	constructor(public payload: any) {}
+}
+
+export class ShowSearchResults implements Action {
+	type = ActionTypes.SHOW_SEARCH_RESULTS;
+
+	constructor(public payload: any) {}
+}
+
 /**
  * Export a type alias of all actions in this action group
  * so that reducers can easily compose action types
@@ -117,4 +131,6 @@ export type Actions
 	| FetchUserFailAction
 	| FetchAggregationAction
 	| FetchAggregationSuccessAction
-	| FetchAggregationFailAction;
+	| FetchAggregationFailAction
+	| ShowUserFeed
+	| ShowSearchResults;
