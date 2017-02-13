@@ -24,8 +24,8 @@ export const ActionTypes = {
 	FETCH_AGGREGATION: actionTypeCheck('[Api] Fetch Aggregation'),
 	FETCH_AGGREGATION_SUCCESS: actionTypeCheck('[Api] Fetch Aggregation Success'),
 	FETCH_AGGREGATION_FAIL: actionTypeCheck('[Api] Fetch Aggregation Fail'),
-	SHOW_USER_FEED: actionTypeCheck('Show User Feed'),
-	SHOW_SEARCH_RESULTS: actionTypeCheck('Show Search Results')
+	SHOW_USER_FEED: actionTypeCheck('[Api] Show User Feed'),
+	SHOW_SEARCH_RESULTS: actionTypeCheck('[Api] Show Search Results')
 };
 
 /**
